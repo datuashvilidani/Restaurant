@@ -1,4 +1,4 @@
-import { ADMIN_EMAILS } from "./AdminEmails";
+import { ADMIN_EMAILS } from "./adminEmails";
 
 export const SESSION_KEY = "sessionEmail";
 

@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { ADMIN_PASSWORD } from "./AdminEmails";
+import { ADMIN_PASSWORD } from "./adminEmails";
 import { isAdminEmail, setSessionEmail, getSessionEmail } from "./auth";
 
 
