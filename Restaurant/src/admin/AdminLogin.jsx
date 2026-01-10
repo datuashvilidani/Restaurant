@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { ADMIN_PASSWORD } from "./AdminEmails";
 import { isAdminEmail, setSessionEmail, getSessionEmail } from "./auth";
 
+
 export default function AdminLogin() {
     const navigate = useNavigate();
     const [email, setEmail] = useState(getSessionEmail());
