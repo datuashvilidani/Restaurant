@@ -66,7 +66,7 @@ export default function Footer({ footerRef }) {
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 md:flex-row">
           <p className="text-xs text-white/50">
-            © 2025 GeorgianTaste. All rights reserved.
+            © Made By Daniel Datuashvili
           </p>
 
           <div className="flex gap-4 text-xs text-white/50">
