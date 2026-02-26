@@ -4,7 +4,6 @@ import Khinkali from "../assets/khinkali.jpg";
 import mtsvadi from "../assets/mwvadi.jpg";
 import kartofili from "../assets/kartofili.jpg";
 import churchxela from "../assets/churchxela.png";
-import drop from "../assets/drop.png";
 
 const SESSION_KEY = "session";
 const CART_KEY = "dk-cart";
@@ -54,14 +53,6 @@ function addToCartIfLoggedIn(navigate, item) {
 
 export default function Menu() {
   const navigate = useNavigate();
-
-  const droplets = [
-    { top: "55%", left: "65%", size: 90 },
-    { top: "40%", left: "53%", size: 120 },
-    { top: "42%", left: "70%", size: 110 },
-    { top: "100%", left: "53%", size: 80 },
-    { top: "90%", left: "79%", size: 130 },
-  ];
 
   const items = useMemo(
     () => [
@@ -194,28 +185,8 @@ export default function Menu() {
           </div>
         ))}
       </div>
-
-      <div className="relative">
-        <div className="pointer-events-none absolute inset-0 z-20">
-          {droplets.map((d, i) => (
-            <img
-              key={i}
-              src={drop}
-              alt=""
-              className="absolute select-none"
-              style={{
-                top: d.top,
-                left: d.left,
-                width: d.size,
-                height: d.size,
-                opacity: d.opacity,
-                filter:
-                  "drop-shadow(0 2 20px rgba(216,102,35,0.45)) drop-shadow(0 0 32px rgba(216,102,35,0.25))",
-              }}
-            />
-          ))}
-        </div>
-
+      
+      <div>
         <div
           id="specials"
           className="mx-auto w-full max-w-6xl rounded-3xl border border-white/10 bg-[#140d08] p-6 shadow-2xl md:p-10 mt-20 mb-20"

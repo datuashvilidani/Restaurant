@@ -2,7 +2,7 @@ import Acharuli from "../assets/acharuli-removebg-preview.png"
 export default function Hero() {
     return (
         <main className="bg-[#140d08] text-white mt-16">
-            <div className="mx-auto max-w-6xl flex">
+            <div className="mx-auto max-w-6xl flex flex-col items-center md:flex-row md:items-center">
                 <section className="mx-auto max-w-6xl px-4 py-14 md:py-20">
                     <div className=" gap-10 md:grid-cols-2 md:items-center">
                         <div>
@@ -41,7 +41,21 @@ export default function Hero() {
                 </section>
 
                 <section className="mt-10">
-                    <img src={Acharuli} className="mx-auto mt-5 w-full h-auto cursor-pointer transition-transform duration-200 hover:scale-102" />
+                    <img
+                        src={Acharuli}
+                        alt="Acharuli"
+                        className="
+    w-[90%] 
+    ml-[-15px] 
+    sm:ml-0 
+    md:w-full 
+    h-auto 
+    cursor-pointer 
+    transition-transform 
+    duration-200 
+    hover:scale-105
+  "
+                    />
                 </section>
             </div>
         </main>

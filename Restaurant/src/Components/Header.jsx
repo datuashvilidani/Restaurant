@@ -312,7 +312,7 @@ export default function Header() {
           >
             <svg
               viewBox="0 0 24 24"
-              className="h-5 w-5 transition-transform group-hover:scale-110"
+              className="h-5 w-5 cursor-pointer transition-transform group-hover:scale-110"
               fill="none"
               stroke="currentColor"
               strokeWidth="2"
@@ -330,16 +330,17 @@ export default function Header() {
 
           <a
             href="#order"
-            className="hidden rounded-full bg-orange-400 px-6 py-2.5 text-sm font-bold text-white shadow-md transition hover:scale-105 hover:ring-2 hover:ring-white/50 md:block"
+            className="hidden cursor-default rounded-full bg-orange-400 px-6 py-2.5 text-sm font-bold text-white shadow-md  md:block"
           >
-            Order Online
+            We Deliver Quality
           </a>
-
           <button
             type="button"
             className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition hover:bg-white hover:text-[#a04804]"
             aria-label="Open menu"
             aria-expanded={mobileOpen}
+            onMouseDown={(e) => e.stopPropagation()}
+            onTouchStart={(e) => e.stopPropagation()}
             onClick={() => {
               setMobileOpen((v) => !v);
               setCartOpen(false);
@@ -486,9 +487,9 @@ export default function Header() {
             <a
               href="#order"
               onClick={() => setMobileOpen(false)}
-              className="rounded-xl bg-orange-400 px-3 py-2 text-sm font-bold text-white hover:ring-2 hover:ring-white/40"
+              className="rounded-xl bg-orange-400 px-3 py-2 text-sm font-bold text-white"
             >
-              Order Online
+              We Deliver Quality
             </a>
           </nav>
 

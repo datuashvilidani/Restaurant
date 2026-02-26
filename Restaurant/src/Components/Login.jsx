@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import bgImage from "../assets/plain.jpg"
 
 const USERS_KEY = "users";
 const SESSION_KEY = "session";
@@ -73,8 +74,11 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-[#140d08] flex items-center justify-center px-4 text-white">
-      <div className="w-full max-w-md rounded-3xl border border-white/10 bg-white/5 p-8 shadow-2xl backdrop-blur-md">
+    <div
+      className="relative min-h-screen flex items-center justify-center px-4 text-white bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: `url(${bgImage})` }}
+    >
+      <div className="w-full max-w-md rounded-3xl border border-white/10 bg-black p-8 shadow-2xl backdrop-blur-md">
         <div className="mb-6 text-2xl font-semibold tracking-tight">
           {mode === "login" ? "Welcome Back" : "Create Account"}
         </div>
@@ -139,7 +143,7 @@ export default function Login() {
           )}
 
           <button
-            className="mt-4 w-full rounded-2xl bg-orange-400 py-3 text-sm font-semibold hover:brightness-110 transition-all duration-200"
+            className="cursor-pointer mt-4 w-full rounded-2xl bg-orange-400 py-3 text-sm font-semibold hover:brightness-110 transition-all duration-200"
             type="submit"
           >
             {mode === "login" ? "Login" : "Create Account"}
@@ -152,7 +156,7 @@ export default function Login() {
             setMode((m) => (m === "login" ? "register" : "login"));
             setAuthError("");
           }}
-          className="mt-4 w-full rounded-2xl bg-white/10 py-3 text-sm font-medium hover:bg-white/15 transition-all duration-200"
+          className="cursor-pointer mt-4 w-full rounded-2xl bg-white/10 py-3 text-sm font-medium hover:bg-white/15 transition-all duration-200"
         >
           {mode === "login"
             ? "Need an account? Register"
